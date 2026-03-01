@@ -31,7 +31,11 @@ class TestLoginLogout:
                 ml.login_button)
         )
 
+        # Кликаем по кнопке «Личный кабинет»
+        driver.find_element(*ml.personal_account).click()
+
     # Выход из Личного кабинета
+
     def test_logout(self, driver, ml):
 
         # Кликаем по кнопке «Личный кабинет»

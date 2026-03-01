@@ -27,9 +27,17 @@ class TestRegistration:
             )
         )
 
-        # Проверяем что регистрация прошла успешно, логинимся с данными при
-        # регистрации и выходим
+        # Проверяем успешную регистрацию входом в Личный кабинет и проверкой
+        # наличия заголока "Профиль"
         log_action.test_login(self, driver, ml)
+
+        driver.find_element(*ml.personal_account).click()
+
+        assert WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located(
+                ml.profile))
+
+        # Выходим из Личного кабинета
         log_action.test_logout(self, driver, ml)
 
     # Тест регистрации с невалидным паролем
@@ -48,4 +56,4 @@ class TestRegistration:
         )
 
         # Проверяем появление текста "Некорректный пароль"
-        assert driver.find_element(*ml.invalid_password_error)
+        assert driver.find_element(*ml.invalid_password_error).is_displayed()

@@ -12,6 +12,9 @@ class MyLocators:
     # Заголовок "Соберите бургер"
     constructor_header = (By.XPATH, './/h1[text() = "Соберите бургер"]')
 
+    # Заголовок "Профиль" в Личном кабинете
+    profile = (By.LINK_TEXT, 'Профиль')
+
     # Кнопка Войти
     login_button = (
         By.XPATH,

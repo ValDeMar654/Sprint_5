@@ -16,8 +16,8 @@ class TestIngredientNavigation:
         # Ищем раздел "Соусы" и кликаем на него
         driver.find_element(*ml.sauces_partition).click()
 
-        # Ждём когда раздел "Соусы" станет активным
-        WebDriverWait(driver, 3).until(
+        # Проверяем что раздел "Соусы" стал активным
+        assert WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(
                 ml.active_sauces_partition)
         )
@@ -25,8 +25,8 @@ class TestIngredientNavigation:
         # Ищем раздел "Начинки" и кликаем на него
         driver.find_element(*ml.toppings_partition).click()
 
-        # Ждём когда раздел "Начинки" станет активным
-        WebDriverWait(driver, 3).until(
+        # Проверяем что раздел "Начинки" стал активным
+        assert WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(
                 ml.active_toppings_partition)
         )
@@ -34,8 +34,8 @@ class TestIngredientNavigation:
         # Ищем раздел "Булки" и кликаем на него
         driver.find_element(*ml.burger_bun_partition).click()
 
-        # Ждём когда раздел "Булки" станет активным
-        WebDriverWait(driver, 3).until(
+        # Проверяем что раздел "Булки" стал активным
+        assert WebDriverWait(driver, 3).until(
             expected_conditions.visibility_of_element_located(
                 ml.active_burger_bun_partition)
         )

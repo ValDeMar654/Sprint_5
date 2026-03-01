@@ -18,8 +18,16 @@ class TestLoginViaButtons:
         )
         driver.find_element(*ml.personal_account).click()
 
-        # Логинимся и выходим
+        # Логинимся
         log_action.test_login(self, driver, ml)
+
+        # Проверяем успешный вход в Личный кабинет и проверкой
+        # наличия заголока "Профиль"
+        assert WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located(
+                ml.profile))
+
+        # Выходим
         log_action.test_logout(self, driver, ml)
 
     def test_login_via_login_to_account_button(self, driver, ml):
@@ -31,8 +39,16 @@ class TestLoginViaButtons:
         )
         driver.find_element(*ml.login_to_account_button).click()
 
-        # Логинимся и выходим
+        # Логинимся
         log_action.test_login(self, driver, ml)
+
+        # Проверяем успешный вход в Личный кабинет и проверкой
+        # наличия заголока "Профиль"
+        assert WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located(
+                ml.profile))
+
+        # Выходим
         log_action.test_logout(self, driver, ml)
 
     def test_login_via_login_link_in_reg_form(self, driver, ml):
@@ -57,8 +73,16 @@ class TestLoginViaButtons:
         )
         driver.find_element(*ml.login_link).click()
 
-        # Логинимся и выходим
+        # Логинимся
         log_action.test_login(self, driver, ml)
+
+        # Проверяем успешный вход в Личный кабинет и проверкой
+        # наличия заголока "Профиль"
+        assert WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located(
+                ml.profile))
+
+        # Выходим
         log_action.test_logout(self, driver, ml)
 
     def test_login_via_login_link_in_passw_recov_form(self, driver, ml):
@@ -84,6 +108,14 @@ class TestLoginViaButtons:
         )
         driver.find_element(*ml.login_link).click()
 
-        # Логинимся и выходим
+        # Логинимся
         log_action.test_login(self, driver, ml)
+
+        # Проверяем успешный вход в Личный кабинет и проверкой
+        # наличия заголока "Профиль"
+        assert WebDriverWait(driver, 3).until(
+            expected_conditions.visibility_of_element_located(
+                ml.profile))
+
+        # Выходим
         log_action.test_logout(self, driver, ml)
