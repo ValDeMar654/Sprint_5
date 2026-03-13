@@ -32,14 +32,14 @@
 
 # Реализация
 ## Оглавление
-    - [conftest](#conftest)
-    - [locators](#locators)
-    - [login_logout](#login_logout)
-    - [registration](#registration)
-    - [test_ingredient_navigation](#test_ingredient_navigation)
-    - [test_login_via_buttons](#test_login_via_buttons)
-    - [test_registration_form](#test_registration_form)
-    - [test_switching_to_constructor](#test_switching_to_constructor)
+- [conftest](#conftest)
+- [locators](#locators)
+- [login_logout](#login_logout)
+- [registration](#registration)
+- [test_ingredient_navigation](#test_ingredient_navigation)
+- [test_login_via_buttons](#test_login_via_buttons)
+- [test_registration_form](#test_registration_form)
+- [test_switching_to_constructor](#test_switching_to_constructor)
 
 ## conftest
 Файл содержит стартовую фикстуру и класс локаторов
@@ -100,4 +100,5 @@ def test_switch_to_constructor_via_constructor_button(self, driver, ml)
 def test_switch_to_constructor_via_stellar_burger_logo(self, driver, ml)
 ```
 которые проверяют переход из личного кабинета в конструктор 
-по клику на "Конструктор" или логотип "Stellar Burgers".# Sprint_5
+по клику на "Конструктор" или логотип "Stellar Burgers".
+
